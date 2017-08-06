@@ -1,0 +1,22 @@
+{
+  "name": "es6-js-helper-functions",
+  "version": "1.0.0",
+  "description": "Helper classes and functions to provide functionality for common operations written in ES6",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "build": "babel src -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "keenan johnson",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-latest": "^6.24.1",
+    "chai": "^4.1.1",
+    "mocha": "^3.5.0"
+  }
+}
