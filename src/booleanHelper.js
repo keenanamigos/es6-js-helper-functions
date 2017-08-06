@@ -21,7 +21,7 @@
         if (BooleanHelper.isBoolean(value)) {
             if (value === true) {
                 return 1;
-            } else if (value === false) {
+            } else {
                 return 0;
             }
         } else {
