@@ -4,7 +4,7 @@ describe('formatDate', () => {
     const DateHelper = require('../dist/dateHelper').DateHelper;
 
     it('should return a properly formatted date', () => {
-        const month = "08";
+        const month = "8";
         const day = "06";
         const year = "2018";
         
