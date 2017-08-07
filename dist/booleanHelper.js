@@ -26,7 +26,7 @@ var BooleanHelper = exports.BooleanHelper = function () {
     _createClass(BooleanHelper, null, [{
         key: "isBoolean",
         value: function isBoolean(value) {
-            if (value === true || value === false) {
+            if (value.constructor === Boolean) {
                 return true;
             } else {
                 return false;

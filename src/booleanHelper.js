@@ -10,7 +10,7 @@
 
     // Class Methods
     static isBoolean(value) {
-        if (value === true || value === false) {
+        if (value.constructor === Boolean) {
             return true;
         } else {
             return false;
