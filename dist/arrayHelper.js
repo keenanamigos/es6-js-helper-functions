@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -9,31 +9,31 @@ var _createClass = function () { function defineProperties(target, props) { for 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
- * @class ObjectHelper
+ * @class ArrayHelper
  */
 
-var ObjectHelper = exports.ObjectHelper = function () {
+var ArrayHelper = exports.ArrayHelper = function () {
     /**
     * @constructor
     */
-    function ObjectHelper() {
-        _classCallCheck(this, ObjectHelper);
+    function ArrayHelper() {
+        _classCallCheck(this, ArrayHelper);
     }
 
     // Class Methods
 
 
-    _createClass(ObjectHelper, null, [{
-        key: "isObjectNullOrEmpty",
-        value: function isObjectNullOrEmpty(object) {
-            // Will return true if a non-object is passed in
-            if (object === null || typeof object === "undefined" || object.constructor !== Object) return true;
+    _createClass(ArrayHelper, null, [{
+        key: 'isArrayNullOrEmpty',
+        value: function isArrayNullOrEmpty(array) {
+            // Will return true if a non-array is passed in
+            if (array === null || typeof array === 'undefined' || array.constructor !== Array) return true;
 
-            if (Object.keys(object).length === 0 && object.constructor === Object) return true;
+            if (array.length === 0 && array.constructor === Array) return true;
 
             return false;
         }
     }]);
 
-    return ObjectHelper;
+    return ArrayHelper;
 }();
