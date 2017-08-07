@@ -1,5 +1,5 @@
 /**
- * @class BooleanHelper
+ * @class DateHelper
  */
 
  export class DateHelper {
