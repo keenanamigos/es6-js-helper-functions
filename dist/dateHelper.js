@@ -9,30 +9,42 @@ var _createClass = function () { function defineProperties(target, props) { for 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
- * @class NullHelper
+ * @class BooleanHelper
  */
 
-var NullHelper = exports.NullHelper = function () {
+var DateHelper = exports.DateHelper = function () {
     /**
     * @constructor
     */
-    function NullHelper() {
-        _classCallCheck(this, NullHelper);
+    function DateHelper() {
+        _classCallCheck(this, DateHelper);
     }
 
-    // Class Methods
+    _createClass(DateHelper, null, [{
+        key: "getFormattedCurrentDate",
+        value: function getFormattedCurrentDate() {
+            var currentDate = new Date();
 
+            // January is 0 by default so 1 is added for formattting
+            var month = currentDate.getMonth() + 1;
 
-    _createClass(NullHelper, null, [{
-        key: "convertNullToZero",
-        value: function convertNullToZero(input) {
-            if (input === null) {
-                return 0;
-            } else {
-                return input;
+            if (month < 10) {
+                month = "0" + month;
             }
+
+            var day = currentDate.getDate();
+            var year = currentDate.getFullYear();
+
+            currentDate = DateHelper.formatDate(month, day, year);
+
+            return currentDate;
+        }
+    }, {
+        key: "formatDate",
+        value: function formatDate(month, day, year) {
+            return month + "/" + day + "/" + year;
         }
     }]);
 
-    return NullHelper;
+    return DateHelper;
 }();
