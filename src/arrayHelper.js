@@ -12,7 +12,7 @@
     static isArrayNullOrEmpty(array) {
         if (array === null || typeof array === 'undefined') return true;
 
-        if (array.constructor !== Array) throw new TypeError(`${array} is not an Array.`);
+        if (!Array.isArray(array)) throw new TypeError(`${array} is not an Array.`);
 
         if (array.length === 0 && array.constructor === Array) return true;
 
