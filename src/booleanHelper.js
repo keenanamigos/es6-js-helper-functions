@@ -25,7 +25,7 @@
                 return 0;
             }
         } else {
-            return value;
+            throw new TypeError(`${value} is not a Boolean.`);
         }
     }
  }

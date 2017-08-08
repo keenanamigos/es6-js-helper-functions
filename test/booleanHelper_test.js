@@ -28,9 +28,9 @@ describe('convertBooleanToInt', () => {
         expect(BooleanHelper.convertBooleanToInt(someBool)).to.equal(0);
     });
 
-    it('should return the given value if the value was not a boolean', () => {
+    it('should throw a TypeError is the given parameter is not a boolean', () => {
         let someInt = 5;
 
-        expect(BooleanHelper.convertBooleanToInt(someInt)).to.equal(5);
+        expect(BooleanHelper.convertBooleanToInt.bind(BooleanHelper.convertBooleanToInt, someInt)).to.throw(TypeError, someInt + " is not a Boolean.");
     });
 });
