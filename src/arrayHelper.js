@@ -10,8 +10,9 @@
 
     // Class Methods
     static isArrayNullOrEmpty(array) {
-        // Will return true if a non-array is passed in
-        if (array === null || typeof array === 'undefined' || array.constructor !== Array) return true;
+        if (array === null || typeof array === 'undefined') return true;
+
+        if (array.constructor !== Array) throw new TypeError(`${array} is not an Array.`);
 
         if (array.length === 0 && array.constructor === Array) return true;
 

@@ -21,9 +21,9 @@ describe('isArrayNullOrEmpty', () => {
         expect(ArrayHelper.isArrayNullOrEmpty(someNullValue)).to.be.true;
     });
 
-    it('should return true when a non-array is passed in', () => {
+    it('should throw a TypeError when a non-array is passed in', () => {
         let someNumber = 6;
 
-        expect(ArrayHelper.isArrayNullOrEmpty(someNumber)).to.be.true;
+        expect(ArrayHelper.isArrayNullOrEmpty.bind(ArrayHelper.isArrayNullOrEmpty, someNumber)).to.throw(TypeError, someNumber + " is not an Array.");
     });
 });
