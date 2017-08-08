@@ -24,9 +24,9 @@ describe('isObjectNullOrEmpty', () => {
         expect(ObjectHelper.isObjectNullOrEmpty(someValue)).to.be.true;
     });
 
-    it('shoud return true if a non-object is passed in', () => {
+    it('shoud throw a TypeError if the given parameter is not an object', () => {
         let someArray = [1, 2, 3];
 
-         expect(ObjectHelper.isObjectNullOrEmpty(someArray)).to.be.true;
+         expect(ObjectHelper.isObjectNullOrEmpty.bind(ObjectHelper.isObjectNullOrEmpty, someArray)).to.throw(TypeError, someArray + " is not an Object.");
     });
 });

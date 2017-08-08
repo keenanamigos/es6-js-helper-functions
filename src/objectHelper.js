@@ -10,8 +10,9 @@
 
     // Class Methods
     static isObjectNullOrEmpty(object) {
-        // Will return true if a non-object is passed in
-        if (object === null || typeof object === "undefined" || object.constructor !== Object) return true;
+        if (object === null || typeof object === "undefined") return true;
+
+        if (object.constructor !== Object) throw new TypeError(`${object} is not an Object.`);
 
         if (Object.keys(object).length === 0 && object.constructor === Object) return true;
 
