@@ -30,7 +30,7 @@ var ArrayHelper = exports.ArrayHelper = function () {
 
             if (!Array.isArray(array)) throw new TypeError(array + ' is not an Array.');
 
-            if (array.length === 0 && array.constructor === Array) return true;
+            if (array.length === 0 && Array.isArray(array)) return true;
 
             return false;
         }
