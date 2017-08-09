@@ -26,6 +26,11 @@
             month = "0" + month;
         }
 
+        if (day < 10) {
+            day = "0" + day;
+        }
+
+        // Example of post-formatted date: 08/08/2017
         return month + "/" + day + "/" + year;
     }
  }
