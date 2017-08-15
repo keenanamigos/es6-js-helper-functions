@@ -10,6 +10,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 /**
  * @class BooleanHelper
+ * Class provides static methods to perform checks and operations on boolean values
  */
 
 var BooleanHelper = exports.BooleanHelper = function () {
@@ -22,6 +23,12 @@ var BooleanHelper = exports.BooleanHelper = function () {
 
     // Class Methods
 
+    /**
+     * Performs a check to see if a given value is of type boolean.
+     * @param {any} value - Value to be checked to determine if it is a boolean.
+     * @return {boolean} - Return true or false dependent on if the given value is of type boolean.
+     */
+
 
     _createClass(BooleanHelper, null, [{
         key: "isBoolean",
@@ -32,6 +39,13 @@ var BooleanHelper = exports.BooleanHelper = function () {
                 return false;
             }
         }
+
+        /**
+         * Convert a given boolean to a corresponding integer value
+         * @param {boolean} value - Boolean to be converted.
+         * @return {number} - Return the proper integer value given a true or false parameter.
+         */
+
     }, {
         key: "convertBooleanToInt",
         value: function convertBooleanToInt(value) {

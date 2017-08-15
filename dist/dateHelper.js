@@ -10,6 +10,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 /**
  * @class DateHelper
+ * Class to perform operations on Date values 
  */
 
 var DateHelper = exports.DateHelper = function () {
@@ -19,6 +20,13 @@ var DateHelper = exports.DateHelper = function () {
     function DateHelper() {
         _classCallCheck(this, DateHelper);
     }
+
+    /**
+     * Get the current date formatted as 08/08/2017.
+     * @param {none}
+     * @return {Date} - Return a formatted date in the form of month, day, year.
+     */
+
 
     _createClass(DateHelper, null, [{
         key: "getFormattedCurrentDate",
@@ -34,6 +42,15 @@ var DateHelper = exports.DateHelper = function () {
 
             return currentDate;
         }
+
+        /**
+         * Convert a given boolean to a corresponding integer value
+         * @param {number} month - A given month.
+         * @param {number} day - A given day.
+         * @param {number} year - A given year.
+         * @return {string} - Return the formatted date as a string.
+         */
+
     }, {
         key: "formatDate",
         value: function formatDate(month, day, year) {

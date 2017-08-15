@@ -1,5 +1,6 @@
 /**
  * @class DateHelper
+ * Class to perform operations on Date values 
  */
 
  export class DateHelper {
@@ -8,6 +9,11 @@
      */
     constructor() {}
 
+    /**
+     * Get the current date formatted as 08/08/2017.
+     * @param {none}
+     * @return {Date} - Return a formatted date in the form of month, day, year.
+     */
     static getFormattedCurrentDate() {
         let currentDate = new Date();
 
@@ -21,6 +27,13 @@
         return currentDate;
     }
 
+    /**
+     * Convert a given boolean to a corresponding integer value
+     * @param {number} month - A given month.
+     * @param {number} day - A given day.
+     * @param {number} year - A given year.
+     * @return {string} - Return the formatted date as a string.
+     */
     static formatDate(month, day, year) {
         if (month < 10) {
             month = "0" + month;
