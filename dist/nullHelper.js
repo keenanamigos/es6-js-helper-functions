@@ -23,7 +23,6 @@ var NullHelper = exports.NullHelper = function () {
 
     // Class Methods
 
-
     /**
      * Convert a null value to the integer 0 or return the given value. 
      * @param {any} input - Given value to be checked and converted if null.
