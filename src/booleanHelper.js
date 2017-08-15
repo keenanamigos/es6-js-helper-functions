@@ -10,6 +10,7 @@
     constructor() {}
 
     // Class Methods
+    
     /**
      * Performs a check to see if a given value is of type boolean.
      * @param {any} value - Value to be checked to determine if it is a boolean.

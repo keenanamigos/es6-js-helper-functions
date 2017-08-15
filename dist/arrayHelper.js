@@ -22,6 +22,7 @@ var ArrayHelper = exports.ArrayHelper = function () {
   }
 
   // Class Methods
+
   /**
    * Performs a check to see if a given array is null or empty.
    * @param {array} array - Array to be checked.
