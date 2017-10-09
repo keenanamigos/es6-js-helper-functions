@@ -6,7 +6,7 @@ const print = require('gulp-print');
 gulp.task('build', () => {
     return gulp.src('src/*.js')
         .pipe(print())
-        .pipe( babel({ presets: ['es2015'] }))
+        .pipe( babel({ presets: ['env'] }))
         .pipe(gulp.dest('dist'));
 });
 

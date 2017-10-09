@@ -17,7 +17,7 @@
      * @return {boolean} - Return true or false dependent on if the array is null or empty.
      */
     static isArrayNullOrEmpty(array) {
-        if (array === null || typeof array === 'undefined') return true;
+        if (array === null || typeof array === "undefined") return true;
 
         if (!Array.isArray(array)) throw new TypeError(`${array} is not an Array.`);
 

@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -31,11 +31,11 @@ var ArrayHelper = exports.ArrayHelper = function () {
 
 
   _createClass(ArrayHelper, null, [{
-    key: 'isArrayNullOrEmpty',
+    key: "isArrayNullOrEmpty",
     value: function isArrayNullOrEmpty(array) {
-      if (array === null || typeof array === 'undefined') return true;
+      if (array === null || typeof array === "undefined") return true;
 
-      if (!Array.isArray(array)) throw new TypeError(array + ' is not an Array.');
+      if (!Array.isArray(array)) throw new TypeError(array + " is not an Array.");
 
       if (array.length === 0 && Array.isArray(array)) return true;
 
