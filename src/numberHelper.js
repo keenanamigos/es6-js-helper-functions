@@ -12,6 +12,10 @@
      * @return {number} - Return an integer.
      */
     static getRandomInteger(maxValue) {
+        if (Number.isNaN(maxValue)) {
+            throw new TypeError(`${maxValue} is not a number.`);
+        } 
+
         const minValue = 0;
 
         // The maximum and minimum are both inclusive
