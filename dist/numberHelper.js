@@ -29,10 +29,14 @@ var NumberHelper = exports.NumberHelper = function () {
          * @return {number} - Return an integer.
          */
         value: function getRandomInteger(maxValue) {
-            var minValue = 0;
+            if (NumberHelper.isGreaterThanZero(maxValue)) {
+                var minValue = 0;
 
-            // The maximum and minimum are both inclusive
-            return Math.floor(Math.random() * (maxValue - minValue + 1)) + minValue;
+                // The maximum and minimum are both inclusive
+                return Math.floor(Math.random() * (maxValue - minValue + 1)) + minValue;
+            } else {
+                throw new Error(maxValue + " is not a valid input. Please enter a Number greater than zero.");
+            }
         }
 
         /**

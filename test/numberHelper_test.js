@@ -8,6 +8,24 @@ describe("getRandomInteger", () => {
 
         expect(NumberHelper.getRandomInteger(maxValue)).to.be.within(0, maxValue);
     });
+
+    it("should throw an error if the integer 0 is given", () => {
+        const maxValue = 0;
+
+        expect(NumberHelper.getRandomInteger.bind(NumberHelper.getRandomInteger, maxValue)).to.throw(Error, maxValue + " is not a valid input. Please enter a Number greater than zero.");
+    });
+
+    it("should throw an error if a negative number is given", () => {
+        const maxValue = 0;
+        
+        expect(NumberHelper.getRandomInteger.bind(NumberHelper.getRandomInteger, maxValue)).to.throw(Error, maxValue + " is not a valid input. Please enter a Number greater than zero.");
+    });
+
+    it("should throw an error if a non-number is given", () => {
+        const maxValue = 0;
+        
+        expect(NumberHelper.getRandomInteger.bind(NumberHelper.getRandomInteger, maxValue)).to.throw(Error, maxValue + " is not a valid input. Please enter a Number greater than zero.");
+    });
 });
 
 describe("isGreaterThanZero", () => {

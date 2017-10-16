@@ -12,10 +12,14 @@
      * @return {number} - Return an integer.
      */
     static getRandomInteger(maxValue) {
-        const minValue = 0;
-
-        // The maximum and minimum are both inclusive
-        return Math.floor(Math.random() * (maxValue - minValue + 1)) + minValue; 
+        if (NumberHelper.isGreaterThanZero(maxValue)) {
+            const minValue = 0;
+            
+            // The maximum and minimum are both inclusive
+            return Math.floor(Math.random() * (maxValue - minValue + 1)) + minValue; 
+        } else {
+            throw new Error(`${maxValue} is not a valid input. Please enter a Number greater than zero.`);
+        }
      }
 
     /**
