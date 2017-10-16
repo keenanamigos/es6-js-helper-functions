@@ -12,13 +12,22 @@
      * @return {number} - Return an integer.
      */
     static getRandomInteger(maxValue) {
-        if (Number.isNaN(maxValue)) {
-            throw new TypeError(`${maxValue} is not a number.`);
-        } 
-
         const minValue = 0;
 
         // The maximum and minimum are both inclusive
         return Math.floor(Math.random() * (maxValue - minValue + 1)) + minValue; 
+     }
+
+    /**
+     * Determine if a given number is greater than zero.
+     * @param {number} number - Number to be checked.
+     * @return {boolean} - Return an boolean based on if the given value is greater than or less than zero.
+     */
+     static isGreaterThanZero(number) {
+         if (!Number.isNaN(number) && number > 0) {
+             return true;
+         }
+
+         return false;
      }
  }

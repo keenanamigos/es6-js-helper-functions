@@ -29,14 +29,26 @@ var NumberHelper = exports.NumberHelper = function () {
          * @return {number} - Return an integer.
          */
         value: function getRandomInteger(maxValue) {
-            if (Number.isNaN(maxValue)) {
-                throw new TypeError(maxValue + " is not a number.");
-            }
-
             var minValue = 0;
 
             // The maximum and minimum are both inclusive
             return Math.floor(Math.random() * (maxValue - minValue + 1)) + minValue;
+        }
+
+        /**
+         * Determine if a given number is greater than zero.
+         * @param {number} number - Number to be checked.
+         * @return {boolean} - Return an boolean based on if the given value is greater than or less than zero.
+         */
+
+    }, {
+        key: "isGreaterThanZero",
+        value: function isGreaterThanZero(number) {
+            if (!Number.isNaN(number) && number > 0) {
+                return true;
+            }
+
+            return false;
         }
     }]);
 
