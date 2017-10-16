@@ -14,24 +14,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 
 var ArrayHelper = exports.ArrayHelper = function () {
-  /**
-  * @constructor
-  */
   function ArrayHelper() {
     _classCallCheck(this, ArrayHelper);
   }
 
-  // Class Methods
-
-  /**
-   * Performs a check to see if a given array is null or empty.
-   * @param {array} array - Array to be checked.
-   * @return {boolean} - Return true or false dependent on if the array is null or empty.
-   */
-
-
   _createClass(ArrayHelper, null, [{
     key: "isArrayNullOrEmpty",
+
+    // Class Methods
+
+    /**
+     * Performs a check to see if a given array is null or empty.
+     * @param {array} array - Array to be checked.
+     * @return {boolean} - Return true or false dependent on if the array is null or empty.
+     */
     value: function isArrayNullOrEmpty(array) {
       if (array === null || typeof array === "undefined") return true;
 

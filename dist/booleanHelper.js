@@ -14,24 +14,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 
 var BooleanHelper = exports.BooleanHelper = function () {
-    /**
-    * @constructor
-    */
     function BooleanHelper() {
         _classCallCheck(this, BooleanHelper);
     }
 
-    // Class Methods
-
-    /**
-     * Performs a check to see if a given value is of type boolean.
-     * @param {any} value - Value to be checked to determine if it is a boolean.
-     * @return {boolean} - Return true or false dependent on if the given value is of type boolean.
-     */
-
-
     _createClass(BooleanHelper, null, [{
         key: "isBoolean",
+
+        // Class Methods
+
+        /**
+         * Performs a check to see if a given value is of type boolean.
+         * @param {any} value - Value to be checked to determine if it is a boolean.
+         * @return {boolean} - Return true or false dependent on if the given value is of type boolean.
+         */
         value: function isBoolean(value) {
             if (value.constructor === Boolean) {
                 return true;

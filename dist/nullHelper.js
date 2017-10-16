@@ -14,24 +14,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 
 var NullHelper = exports.NullHelper = function () {
-    /**
-    * @constructor
-    */
     function NullHelper() {
         _classCallCheck(this, NullHelper);
     }
 
-    // Class Methods
-
-    /**
-     * Convert a null value to the integer 0 or return the given value. 
-     * @param {any} input - Given value to be checked and converted if null.
-     * @return {any} - Return the integer 0 if null or the given input otherwise
-     */
-
-
     _createClass(NullHelper, null, [{
         key: "convertNullToZero",
+
+        // Class Methods
+
+        /**
+         * Convert a null value to the integer 0 or return the given value. 
+         * @param {any} input - Given value to be checked and converted if null.
+         * @return {any} - Return the integer 0 if null or the given input otherwise
+         */
         value: function convertNullToZero(input) {
             if (input === null) {
                 return 0;

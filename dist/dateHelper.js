@@ -14,22 +14,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 
 var DateHelper = exports.DateHelper = function () {
-    /**
-    * @constructor
-    */
     function DateHelper() {
         _classCallCheck(this, DateHelper);
     }
 
-    /**
-     * Get the current date formatted as 08/08/2017.
-     * @param {none}
-     * @return {Date} - Return a formatted date in the form of month, day, year.
-     */
-
-
     _createClass(DateHelper, null, [{
         key: "getFormattedCurrentDate",
+
+        // Class Methods
+
+        /**
+         * Get the current date formatted as 08/08/2017.
+         * @param {none}
+         * @return {Date} - Return a formatted date in the form of month, day, year.
+         */
         value: function getFormattedCurrentDate() {
             var currentDate = new Date();
 
