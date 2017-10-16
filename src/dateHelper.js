@@ -4,11 +4,8 @@
  */
 
  export class DateHelper {
-     /**
-     * @constructor
-     */
-    constructor() {}
-
+    // Class Methods
+    
     /**
      * Get the current date formatted as 08/08/2017.
      * @param {none}

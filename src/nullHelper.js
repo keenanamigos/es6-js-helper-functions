@@ -4,11 +4,6 @@
  */
 
  export class NullHelper {
-     /**
-     * @constructor
-     */
-    constructor() {}
-
     // Class Methods
 
     /**

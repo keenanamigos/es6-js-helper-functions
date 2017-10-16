@@ -4,11 +4,6 @@
  */
 
  export class ObjectHelper {
-     /**
-     * @constructor
-     */
-    constructor() {}
-
     // Class Methods
 
     /**

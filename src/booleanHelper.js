@@ -4,11 +4,6 @@
  */
 
  export class BooleanHelper {
-     /**
-     * @constructor
-     */
-    constructor() {}
-
     // Class Methods
     
     /**

@@ -4,11 +4,6 @@
  */
 
  export class ArrayHelper {
-     /**
-     * @constructor
-     */
-    constructor() {}
-
     // Class Methods
     
     /**
