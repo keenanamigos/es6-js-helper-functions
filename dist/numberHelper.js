@@ -24,18 +24,17 @@ var NumberHelper = exports.NumberHelper = function () {
         // Class Methods
 
         /**
-         * Return a random integer between 0 and a given value.
+         * Return a random integer between the given minimum and maximum values.
+         * @param {number} minValue - Minimum value the returned integer can be.
          * @param {number} maxValue - Maximum value the returned integer can be.
          * @return {number} - Return an integer.
          */
-        value: function getRandomInteger(maxValue) {
-            if (NumberHelper.isGreaterThanZero(maxValue)) {
-                var minValue = 0;
-
+        value: function getRandomInteger(minValue, maxValue) {
+            if (NumberHelper.isZeroOrGreater(minValue) && NumberHelper.isGreaterThanZero(maxValue)) {
                 // The maximum and minimum are both inclusive
                 return Math.floor(Math.random() * (maxValue - minValue + 1)) + minValue;
             } else {
-                throw new Error(maxValue + " is not a valid input. Please enter a Number greater than zero.");
+                throw new Error(minValue + " AND/OR " + maxValue + " are not valid input. Please enter Numbers greater than zero.");
             }
         }
 
@@ -49,6 +48,22 @@ var NumberHelper = exports.NumberHelper = function () {
         key: "isGreaterThanZero",
         value: function isGreaterThanZero(number) {
             if (!Number.isNaN(number) && number > 0) {
+                return true;
+            }
+
+            return false;
+        }
+
+        /**
+         * Determine if a given number is zero or greater.
+         * @param {number} number - Number to be checked.
+         * @return {boolean} - Return an boolean based on if the given value is zero or greater.
+         */
+
+    }, {
+        key: "isZeroOrGreater",
+        value: function isZeroOrGreater(number) {
+            if (!Number.isNaN(number) && number >= 0) {
                 return true;
             }
 
