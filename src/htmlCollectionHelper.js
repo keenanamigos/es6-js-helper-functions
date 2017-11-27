@@ -1,9 +1,9 @@
 /**
  * @class HTMLCollectionHelper
- * Class provides static methods to perform checks and operations on arrays
+ * Class provides static methods to perform checks and operations on HTMLCollections
  */
 
-class HTMLCollectionHelper {
+export class HTMLCollectionHelper {
     // Class Methods
 
     /**
