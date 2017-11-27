@@ -1,7 +1,7 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+	value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -14,56 +14,56 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 
 var DateHelper = exports.DateHelper = function () {
-    function DateHelper() {
-        _classCallCheck(this, DateHelper);
-    }
+	function DateHelper() {
+		_classCallCheck(this, DateHelper);
+	}
 
-    _createClass(DateHelper, null, [{
-        key: "getFormattedCurrentDate",
+	_createClass(DateHelper, null, [{
+		key: "getFormattedCurrentDate",
 
-        // Class Methods
+		// Class Methods
 
-        /**
-         * Get the current date formatted as 08/08/2017.
-         * @param {none}
-         * @return {Date} - Return a formatted date in the form of month, day, year.
-         */
-        value: function getFormattedCurrentDate() {
-            var currentDate = new Date();
+		/**
+      * Get the current date formatted as 08/08/2017.
+      * @param {none}
+      * @return {Date} - Return a formatted date in the form of month, day, year.
+      */
+		value: function getFormattedCurrentDate() {
+			var currentDate = new Date();
 
-            // January is 0 by default so 1 is added for formattting
-            var month = currentDate.getMonth() + 1;
-            var day = currentDate.getDate();
-            var year = currentDate.getFullYear();
+			// January is 0 by default so 1 is added for formattting
+			var month = currentDate.getMonth() + 1;
+			var day = currentDate.getDate();
+			var year = currentDate.getFullYear();
 
-            currentDate = DateHelper.formatDate(month, day, year);
+			currentDate = DateHelper.formatDate(month, day, year);
 
-            return currentDate;
-        }
+			return currentDate;
+		}
 
-        /**
-         * Convert a given boolean to a corresponding integer value
-         * @param {number} month - A given month.
-         * @param {number} day - A given day.
-         * @param {number} year - A given year.
-         * @return {string} - Return the formatted date as a string.
-         */
+		/**
+      * Convert a given boolean to a corresponding integer value
+      * @param {number} month - A given month.
+      * @param {number} day - A given day.
+      * @param {number} year - A given year.
+      * @return {string} - Return the formatted date as a string.
+      */
 
-    }, {
-        key: "formatDate",
-        value: function formatDate(month, day, year) {
-            if (month < 10) {
-                month = "0" + month;
-            }
+	}, {
+		key: "formatDate",
+		value: function formatDate(month, day, year) {
+			if (month < 10) {
+				month = "0" + month;
+			}
 
-            if (day < 10) {
-                day = "0" + day;
-            }
+			if (day < 10) {
+				day = "0" + day;
+			}
 
-            // Example of post-formatted date: 08/08/2017
-            return month + "/" + day + "/" + year;
-        }
-    }]);
+			// Example of post-formatted date: 08/08/2017
+			return month + "/" + day + "/" + year;
+		}
+	}]);
 
-    return DateHelper;
+	return DateHelper;
 }();

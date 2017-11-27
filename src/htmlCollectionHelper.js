@@ -4,16 +4,16 @@
  */
 
 export class HTMLCollectionHelper {
-    // Class Methods
+	// Class Methods
 
-    /**
+	/**
      * Converts a given HTMLCollection to an Array.
      * @param {HTMLCollection} htmlCollection - Collection to be converted.
      * @return {array} - Return an array.
      */
-    static convertCollectionToArray(htmlCollection) {
-        let array = [...htmlCollection];
+	static convertCollectionToArray(htmlCollection) {
+		let array = [...htmlCollection];
 
-        return array;
-    }
+		return array;
+	}
 }

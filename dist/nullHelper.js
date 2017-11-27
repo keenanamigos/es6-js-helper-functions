@@ -1,7 +1,7 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+	value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -14,28 +14,28 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 
 var NullHelper = exports.NullHelper = function () {
-    function NullHelper() {
-        _classCallCheck(this, NullHelper);
-    }
+	function NullHelper() {
+		_classCallCheck(this, NullHelper);
+	}
 
-    _createClass(NullHelper, null, [{
-        key: "convertNullToZero",
+	_createClass(NullHelper, null, [{
+		key: "convertNullToZero",
 
-        // Class Methods
+		// Class Methods
 
-        /**
-         * Convert a null value to the integer 0 or return the given value. 
-         * @param {any} input - Given value to be checked and converted if null.
-         * @return {any} - Return the integer 0 if null or the given input otherwise
-         */
-        value: function convertNullToZero(input) {
-            if (input === null) {
-                return 0;
-            } else {
-                return input;
-            }
-        }
-    }]);
+		/**
+      * Convert a null value to the integer 0 or return the given value. 
+      * @param {any} input - Given value to be checked and converted if null.
+      * @return {any} - Return the integer 0 if null or the given input otherwise
+      */
+		value: function convertNullToZero(input) {
+			if (input === null) {
+				return 0;
+			} else {
+				return input;
+			}
+		}
+	}]);
 
-    return NullHelper;
+	return NullHelper;
 }();

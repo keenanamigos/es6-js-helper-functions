@@ -1,29 +1,29 @@
-var expect = require('chai').expect;
+/* global describe it */
+const expect = require("chai").expect;
+const ArrayHelper = require("../dist/arrayHelper").ArrayHelper;
 
-describe('isArrayNullOrEmpty', () => {
-    const ArrayHelper = require('../dist/arrayHelper').ArrayHelper;
+describe("isArrayNullOrEmpty", () => {
+	it("should return true when an empty array is passed in", () => {
+		let someEmptyArray = [];
 
-    it('should return true when an empty array is passed in', () => {
-        let someEmptyArray = [];
+		expect(ArrayHelper.isArrayNullOrEmpty(someEmptyArray)).to.be.true;
+	});
 
-        expect(ArrayHelper.isArrayNullOrEmpty(someEmptyArray)).to.be.true;
-    });
+	it("should return false when an array with values is passed in", () => {
+		let someFullArray = [1, 2, 3];
 
-    it('should return false when an array with values is passed in', () => {
-        let someFullArray = [1, 2, 3];
+		expect(ArrayHelper.isArrayNullOrEmpty(someFullArray)).to.be.false;
+	});
 
-        expect(ArrayHelper.isArrayNullOrEmpty(someFullArray)).to.be.false;
-    });
+	it("should return true when null is passed in", () => {
+		let someNullValue = null;
 
-    it('should return true when null is passed in', () => {
-        let someNullValue = null;
+		expect(ArrayHelper.isArrayNullOrEmpty(someNullValue)).to.be.true;
+	});
 
-        expect(ArrayHelper.isArrayNullOrEmpty(someNullValue)).to.be.true;
-    });
+	it("should throw a TypeError when a non-array is passed in", () => {
+		let someNumber = 6;
 
-    it('should throw a TypeError when a non-array is passed in', () => {
-        let someNumber = 6;
-
-        expect(ArrayHelper.isArrayNullOrEmpty.bind(ArrayHelper.isArrayNullOrEmpty, someNumber)).to.throw(TypeError, someNumber + " is not an Array.");
-    });
+		expect(ArrayHelper.isArrayNullOrEmpty.bind(ArrayHelper.isArrayNullOrEmpty, someNumber)).to.throw(TypeError, someNumber + " is not an Array.");
+	});
 });

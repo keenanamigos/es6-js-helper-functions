@@ -22,5 +22,8 @@
     "gulp-babel": "^7.0.0",
     "gulp-print": "^2.0.1",
     "mocha": "^3.5.0"
+  },
+  "dependencies": {
+    "eslint": "^4.12.0"
   }
 }
