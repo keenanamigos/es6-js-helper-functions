@@ -1,6 +1,6 @@
 /* global describe it */
-const expect = require("chai").expect;
-const NullHelper = require("../dist/nullHelper").NullHelper;
+import { expect } from "chai";
+import { NullHelper } from "../src/nullHelper";
 
 describe("convertNullToZero", () => {
 	it("should convert a null input to the integer 0", () => {

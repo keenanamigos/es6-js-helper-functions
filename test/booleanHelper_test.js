@@ -1,6 +1,6 @@
 /* global describe it */
-const expect = require("chai").expect;
-const BooleanHelper = require("../dist/booleanHelper").BooleanHelper;
+import { expect } from "chai";
+import { BooleanHelper } from "../src/booleanHelper";
 
 describe("isBoolean", () => {
 	it("should return true if the given parameter is a boolean", () => {

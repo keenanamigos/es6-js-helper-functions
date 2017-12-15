@@ -1,6 +1,6 @@
 /* global describe it */
-const expect = require("chai").expect;
-const DateHelper = require("../dist/dateHelper").DateHelper;
+import { expect } from "chai";
+import { DateHelper } from "../src/dateHelper";
 
 describe("formatDate", () => {
 	it("should return a properly formatted date", () => {

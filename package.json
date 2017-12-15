@@ -4,7 +4,7 @@
   "description": "Helper classes and functions to provide functionality for common operations written in ES6",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
+    "test": "mocha --compilers js:babel-core/register test/*.js",
     "build": "eslint src/*.js test/*.js && mocha && babel src -d dist",
     "lint": "eslint src/*.js test/*.js",
     "lint-fix": "eslint --fix gulpfile.js src/*.js test/*.js"
@@ -18,7 +18,6 @@
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-preset-env": "^1.6.0",
-    "babel-preset-latest": "^6.24.1",
     "chai": "^4.1.1",
     "gulp": "^3.9.1",
     "gulp-babel": "^7.0.0",

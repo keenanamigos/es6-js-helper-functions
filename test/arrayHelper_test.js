@@ -1,6 +1,6 @@
 /* global describe it */
-const expect = require("chai").expect;
-const ArrayHelper = require("../dist/arrayHelper").ArrayHelper;
+import { expect } from "chai";
+import { ArrayHelper } from "../src/arrayHelper";
 
 describe("isArrayNullOrEmpty", () => {
 	it("should return true when an empty array is passed in", () => {

@@ -1,6 +1,6 @@
 /* global describe it */
-const expect = require("chai").expect;
-const NumberHelper = require("../dist/numberHelper").NumberHelper;
+import { expect } from "chai";
+import { NumberHelper } from "../src/numberHelper";
 
 describe("getRandomInteger", () => {
 	it("should return a random integer between 0 and a given value", () => {

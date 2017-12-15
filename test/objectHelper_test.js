@@ -1,6 +1,6 @@
 /* global describe it */
-const expect = require("chai").expect;
-const ObjectHelper = require("../dist/objectHelper").ObjectHelper;
+import { expect } from "chai";
+import { ObjectHelper } from "../src/objectHelper";
 
 describe("isObjectNullOrEmpty", () => {
 	it("should return true if an empty object is passed in", () => {
