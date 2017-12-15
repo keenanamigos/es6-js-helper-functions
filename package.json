@@ -4,8 +4,8 @@
   "description": "Helper classes and functions to provide functionality for common operations written in ES6",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --compilers js:babel-core/register test/*.js",
-    "build": "eslint src/*.js test/*.js && mocha && babel src -d dist",
+    "test": "mocha --compilers js:babel-core/register",
+    "build": "eslint src/*.js test/*.js && mocha --compilers js:babel-core/register && babel src -d dist",
     "lint": "eslint src/*.js test/*.js",
     "lint-fix": "eslint --fix gulpfile.js src/*.js test/*.js"
   },
