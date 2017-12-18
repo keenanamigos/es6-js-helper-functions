@@ -16,9 +16,9 @@ export class DateHelper {
 		let currentDate = new Date();
 
 		// January is 0 by default so 1 is added for formattting
-		let month = currentDate.getMonth() + 1;
-		let day = currentDate.getDate();
-		let year = currentDate.getFullYear();
+		const month = currentDate.getMonth() + 1;
+		const day = currentDate.getDate();
+		const year = currentDate.getFullYear();
 
 		currentDate = DateHelper.formatDate(month, day, year);
 

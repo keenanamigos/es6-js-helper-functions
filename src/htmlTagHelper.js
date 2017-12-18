@@ -15,9 +15,9 @@ export class HTMLTagHelper {
      * @returns {void}
      */
 	static secureTargetBlankAnchorTags(htmlCollection) {
-		let arrayOfAnchorTags = HTMLCollectionHelper.convertCollectionToArray(htmlCollection);
+		const arrayOfAnchorTags = HTMLCollectionHelper.convertCollectionToArray(htmlCollection);
 
-		for (let anchorTag of arrayOfAnchorTags) {
+		for (const anchorTag of arrayOfAnchorTags) {
 			if (HTMLTagHelper.isTargetBlankSecure(anchorTag)) {
 				continue;
 			} else if (anchorTag.rel !== "") {

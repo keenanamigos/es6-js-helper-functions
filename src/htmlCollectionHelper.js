@@ -13,7 +13,7 @@ export class HTMLCollectionHelper {
      * @returns {array} - Return an array.
      */
 	static convertCollectionToArray(htmlCollection) {
-		let array = [...htmlCollection];
+		const array = [...htmlCollection];
 
 		return array;
 	}
