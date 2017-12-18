@@ -24,9 +24,10 @@ var BooleanHelper = exports.BooleanHelper = function () {
 		// Class Methods
 
 		/**
+   * @function
       * Performs a check to see if a given value is of type boolean.
       * @param {any} value - Value to be checked to determine if it is a boolean.
-      * @return {boolean} - Return true or false dependent on if the given value is of type boolean.
+      * @returns {boolean} - Return true or false dependent on if the given value is of type boolean.
       */
 		value: function isBoolean(value) {
 			if (value.constructor === Boolean) {
@@ -37,9 +38,10 @@ var BooleanHelper = exports.BooleanHelper = function () {
 		}
 
 		/**
+   * @function
       * Convert a given boolean to a corresponding integer value
       * @param {boolean} value - Boolean to be converted.
-      * @return {number} - Return the proper integer value given a true or false parameter.
+      * @returns {number} - Return the proper integer value given a true or false parameter.
       */
 
 	}, {

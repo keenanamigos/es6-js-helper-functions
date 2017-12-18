@@ -2,16 +2,17 @@ import { HTMLCollectionHelper } from "./htmlCollectionHelper";
 
 /**
  * @class HTMLTagHelper
- * Class provides static methods to perform checks and operations on arrays
+ * Class provides static methods to perform checks and operations on HTML Tags
  */
 
 export class HTMLTagHelper {
 	// Class Methods
 
 	/**
+	 * @function
      * Properly secures a collection of anchor tags that make use of target="_blank".
      * @param {HTMLCollection} htmlCollection - Collection of anchor tags to be secured.
-     * @return {void}
+     * @returns {void}
      */
 	static secureTargetBlankAnchorTags(htmlCollection) {
 		let arrayOfAnchorTags = HTMLCollectionHelper.convertCollectionToArray(htmlCollection);
@@ -28,9 +29,10 @@ export class HTMLTagHelper {
 	}
 
 	/**
+	 * @function
      * Checks to see if anchor elements containing target="_blank" are properly secured.
      * @param {HTMLAnchorElement} anchorTag - Anchor tag to be checked.
-     * @return {boolean} - Return a boolean based on if an element where target="_blank" also includes noopener and noreferrer in the rel attribute.
+     * @returns {boolean} - Return a boolean based on if an element where target="_blank" also includes noopener and noreferrer in the rel attribute.
      */
 	static isTargetBlankSecure(anchorTag) {
 		if (anchorTag.target === "_blank") {

@@ -7,9 +7,10 @@ export class DateHelper {
 	// Class Methods
     
 	/**
+	 * @function
      * Get the current date formatted as 08/08/2017.
      * @param {none}
-     * @return {Date} - Return a formatted date in the form of month, day, year.
+     * @return {string} - Return a formatted date as a string in the form of month, day, year.
      */
 	static getFormattedCurrentDate() {
 		let currentDate = new Date();
@@ -25,11 +26,12 @@ export class DateHelper {
 	}
 
 	/**
-     * Convert a given boolean to a corresponding integer value
+	 * @function
+     * Format a date as mm/dd/yyyy.
      * @param {number} month - A given month.
      * @param {number} day - A given day.
      * @param {number} year - A given year.
-     * @return {string} - Return the formatted date as a string.
+     * @returns {string} - Return the formatted date as a string.
      */
 	static formatDate(month, day, year) {
 		if (month < 10) {

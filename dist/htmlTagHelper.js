@@ -13,7 +13,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 /**
  * @class HTMLTagHelper
- * Class provides static methods to perform checks and operations on arrays
+ * Class provides static methods to perform checks and operations on HTML Tags
  */
 
 var HTMLTagHelper = exports.HTMLTagHelper = function () {
@@ -27,9 +27,10 @@ var HTMLTagHelper = exports.HTMLTagHelper = function () {
 		// Class Methods
 
 		/**
+   * @function
       * Properly secures a collection of anchor tags that make use of target="_blank".
       * @param {HTMLCollection} htmlCollection - Collection of anchor tags to be secured.
-      * @return {void}
+      * @returns {void}
       */
 		value: function secureTargetBlankAnchorTags(htmlCollection) {
 			var arrayOfAnchorTags = _htmlCollectionHelper.HTMLCollectionHelper.convertCollectionToArray(htmlCollection);
@@ -67,9 +68,10 @@ var HTMLTagHelper = exports.HTMLTagHelper = function () {
 		}
 
 		/**
+   * @function
       * Checks to see if anchor elements containing target="_blank" are properly secured.
       * @param {HTMLAnchorElement} anchorTag - Anchor tag to be checked.
-      * @return {boolean} - Return a boolean based on if an element where target="_blank" also includes noopener and noreferrer in the rel attribute.
+      * @returns {boolean} - Return a boolean based on if an element where target="_blank" also includes noopener and noreferrer in the rel attribute.
       */
 
 	}, {

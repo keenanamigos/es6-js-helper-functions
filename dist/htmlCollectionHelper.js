@@ -26,9 +26,10 @@ var HTMLCollectionHelper = exports.HTMLCollectionHelper = function () {
     // Class Methods
 
     /**
+     * @function
         * Converts a given HTMLCollection to an Array.
         * @param {HTMLCollection} htmlCollection - Collection to be converted.
-        * @return {array} - Return an array.
+        * @returns {array} - Return an array.
         */
     value: function convertCollectionToArray(htmlCollection) {
       var array = [].concat(_toConsumableArray(htmlCollection));

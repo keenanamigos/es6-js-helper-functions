@@ -7,9 +7,10 @@ export class HTMLCollectionHelper {
 	// Class Methods
 
 	/**
+	 * @function
      * Converts a given HTMLCollection to an Array.
      * @param {HTMLCollection} htmlCollection - Collection to be converted.
-     * @return {array} - Return an array.
+     * @returns {array} - Return an array.
      */
 	static convertCollectionToArray(htmlCollection) {
 		let array = [...htmlCollection];
