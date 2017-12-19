@@ -5,13 +5,13 @@ import { ObjectHelper } from "../src/objectHelper";
 describe("ObjectHelper", () => {
 	describe("isObjectNullOrEmpty", () => {
 		it("should return true if an empty object is passed in", () => {
-			let someObject = {};
+			const someObject = {};
 	
 			expect(ObjectHelper.isObjectNullOrEmpty(someObject)).to.be.true;
 		});
 	
 		it("should return false if an object with properties is passed in", () => {
-			let someObject = {
+			const someObject = {
 				name: "some name",
 				age: 26
 			};
@@ -20,13 +20,13 @@ describe("ObjectHelper", () => {
 		});
 	
 		it("should return true if null is passed in", () => {
-			let someValue = null;
+			const someValue = null;
 	
 			expect(ObjectHelper.isObjectNullOrEmpty(someValue)).to.be.true;
 		});
 	
 		it("should throw a TypeError if the given parameter is not an object", () => {
-			let someArray = [1, 2, 3];
+			const someArray = [1, 2, 3];
 	
 			expect(ObjectHelper.isObjectNullOrEmpty.bind(ObjectHelper.isObjectNullOrEmpty, someArray)).to.throw(TypeError, `${someArray } is not an Object.`);
 		});

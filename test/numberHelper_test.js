@@ -11,7 +11,7 @@ describe("NumberHelper", () => {
 			expect(NumberHelper.getRandomInteger(minValue, maxValue)).to.be.within(minValue, maxValue);
 		});
 	
-		it("should throw an error if the integer 0 is given", () => {
+		it("should throw an error if the integer 0 is given for the maxValue", () => {
 			const minValue = 0;
 			const maxValue = 0;
 	
@@ -33,9 +33,7 @@ describe("NumberHelper", () => {
 		});
 	});
 	
-	describe("isGreaterThanZero", () => {
-		const NumberHelper = require("../dist/numberHelper").NumberHelper;
-	
+	describe("isGreaterThanZero", () => {	
 		it("should return true if a given number is greater than 0", () => {
 			const someValue = 95;
 	
@@ -48,7 +46,7 @@ describe("NumberHelper", () => {
 			expect(NumberHelper.isGreaterThanZero(someValue)).to.be.false;
 		});
 	
-		it("should return true if a given number is equal to 0", () => {
+		it("should return false if a given number is equal to 0", () => {
 			const someValue = 0;
 	
 			expect(NumberHelper.isGreaterThanZero(someValue)).to.be.false;
@@ -56,9 +54,7 @@ describe("NumberHelper", () => {
 	});
 	
 	describe("isZeroOrGreater", () => {
-		const NumberHelper = require("../dist/numberHelper").NumberHelper;
-	
-		it("should return true is the given value is 0", () => {
+		it("should return true if the given value is 0", () => {
 			const someValue = 0;
 	
 			expect(NumberHelper.isZeroOrGreater(someValue)).to.be.true;
