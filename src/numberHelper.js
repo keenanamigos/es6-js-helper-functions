@@ -18,7 +18,7 @@ export class NumberHelper {
 			// The maximum and minimum are both inclusive
 			return Math.floor(Math.random() * (maxValue - minValue + 1)) + minValue; 
 		} else {
-			throw new Error(`${minValue} AND/OR ${maxValue} are not valid input. Please enter Numbers greater than zero.`);
+			throw new Error(`${minValue} AND/OR ${maxValue} are not valid input. Please enter values greater than zero.`);
 		}
 	}
 

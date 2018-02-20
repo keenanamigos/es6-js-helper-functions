@@ -15,21 +15,21 @@ describe("NumberHelper", () => {
 			const minValue = 0;
 			const maxValue = 0;
 	
-			expect(NumberHelper.getRandomInteger.bind(NumberHelper.getRandomInteger, minValue, maxValue)).to.throw(Error, `${minValue} AND/OR ${maxValue} are not valid input. Please enter Numbers greater than zero.`);
+			expect(NumberHelper.getRandomInteger.bind(NumberHelper.getRandomInteger, minValue, maxValue)).to.throw(Error, `${minValue} AND/OR ${maxValue} are not valid input. Please enter values greater than zero.`);
 		});
 	
 		it("should throw an error if a negative number is given", () => {
 			const minValue = 0;
 			const maxValue = -6;
 			
-			expect(NumberHelper.getRandomInteger.bind(NumberHelper.getRandomInteger, minValue, maxValue)).to.throw(Error, `${minValue} AND/OR ${maxValue} are not valid input. Please enter Numbers greater than zero.`);
+			expect(NumberHelper.getRandomInteger.bind(NumberHelper.getRandomInteger, minValue, maxValue)).to.throw(Error, `${minValue} AND/OR ${maxValue} are not valid input. Please enter values greater than zero.`);
 		});
 	
 		it("should throw an error if a non-number is given", () => {
 			const minValue = 0;
 			const maxValue = "B";
 			
-			expect(NumberHelper.getRandomInteger.bind(NumberHelper.getRandomInteger, minValue, maxValue)).to.throw(Error, `${minValue} AND/OR ${maxValue} are not valid input. Please enter Numbers greater than zero.`);
+			expect(NumberHelper.getRandomInteger.bind(NumberHelper.getRandomInteger, minValue, maxValue)).to.throw(Error, `${minValue} AND/OR ${maxValue} are not valid input. Please enter values greater than zero.`);
 		});
 	});
 	

@@ -13,11 +13,11 @@ export class BooleanHelper {
      * @returns {boolean} - Return true or false dependent on if the given value is of type boolean.
      */
 	static isBoolean(value) {
-		if (value.constructor === Boolean) {
-			return true;
-		} else {
+		if (value.constructor !== Boolean) {
 			return false;
 		}
+
+		return true;
 	}
 
 	/**
@@ -27,14 +27,14 @@ export class BooleanHelper {
      * @returns {number} - Return the proper integer value given a true or false parameter.
      */
 	static convertBooleanToInt(value) {
-		if (BooleanHelper.isBoolean(value)) {
+		if (!BooleanHelper.isBoolean(value)) {
+			throw new TypeError(`${value} is not a Boolean.`);
+		} else {
 			if (value === true) {
 				return 1;
 			} else {
 				return 0;
 			}
-		} else {
-			throw new TypeError(`${value} is not a Boolean.`);
 		}
 	}
 }
